@@ -13,6 +13,7 @@
 		A61B07841E85188D00368DF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A61B07821E85188D00368DF2 /* Main.storyboard */; };
 		A61B07861E85188E00368DF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A61B07851E85188E00368DF2 /* Assets.xcassets */; };
 		A61B07891E85188E00368DF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A61B07871E85188E00368DF2 /* LaunchScreen.storyboard */; };
+		A61EF3DE1E854218006EB63F /* Quote.m in Sources */ = {isa = PBXBuildFile; fileRef = A61EF3DD1E854218006EB63F /* Quote.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		A61B07851E85188E00368DF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A61B07881E85188E00368DF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A61B078A1E85188E00368DF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A61EF3DC1E854218006EB63F /* Quote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Quote.h; sourceTree = "<group>"; };
+		A61EF3DD1E854218006EB63F /* Quote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Quote.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,25 +61,51 @@
 		A61B07781E85188D00368DF2 /* QuotesClient */ = {
 			isa = PBXGroup;
 			children = (
-				A61B077C1E85188D00368DF2 /* AppDelegate.h */,
-				A61B077D1E85188D00368DF2 /* AppDelegate.m */,
-				A61B077F1E85188D00368DF2 /* ViewController.h */,
-				A61B07801E85188D00368DF2 /* ViewController.m */,
-				A61B07821E85188D00368DF2 /* Main.storyboard */,
+				A61B07791E85188D00368DF2 /* App */,
 				A61B07851E85188E00368DF2 /* Assets.xcassets */,
-				A61B07871E85188E00368DF2 /* LaunchScreen.storyboard */,
+				A61EF3E01E85439D006EB63F /* Base.lproj */,
 				A61B078A1E85188E00368DF2 /* Info.plist */,
-				A61B07791E85188D00368DF2 /* Supporting Files */,
+				A61EF3DF1E85421D006EB63F /* Models */,
+				A61EF3DB1E8540CB006EB63F /* ViewControllers */,
 			);
 			path = QuotesClient;
 			sourceTree = "<group>";
 		};
-		A61B07791E85188D00368DF2 /* Supporting Files */ = {
+		A61B07791E85188D00368DF2 /* App */ = {
 			isa = PBXGroup;
 			children = (
 				A61B077A1E85188D00368DF2 /* main.m */,
+				A61B077C1E85188D00368DF2 /* AppDelegate.h */,
+				A61B077D1E85188D00368DF2 /* AppDelegate.m */,
 			);
-			name = "Supporting Files";
+			path = App;
+			sourceTree = "<group>";
+		};
+		A61EF3DB1E8540CB006EB63F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A61B077F1E85188D00368DF2 /* ViewController.h */,
+				A61B07801E85188D00368DF2 /* ViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A61EF3DF1E85421D006EB63F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A61EF3DC1E854218006EB63F /* Quote.h */,
+				A61EF3DD1E854218006EB63F /* Quote.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A61EF3E01E85439D006EB63F /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				A61B07871E85188E00368DF2 /* LaunchScreen.storyboard */,
+				A61B07821E85188D00368DF2 /* Main.storyboard */,
+			);
+			name = Base.lproj;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +179,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A61EF3DE1E854218006EB63F /* Quote.m in Sources */,
 				A61B07811E85188D00368DF2 /* ViewController.m in Sources */,
 				A61B077E1E85188D00368DF2 /* AppDelegate.m in Sources */,
 				A61B077B1E85188D00368DF2 /* main.m in Sources */,
@@ -309,6 +339,7 @@
 				A61B078F1E85188E00368DF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
