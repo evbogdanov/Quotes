@@ -2,7 +2,7 @@ use Mojolicious::Lite;
 use experimental 'signatures';
 
 get '/quotes' => sub ($c) {
-	my $json = {
+    my $json = {
         quotes => [{
             id     => 1,
             text   => 'Hello, World!',
@@ -13,7 +13,7 @@ get '/quotes' => sub ($c) {
             source => 'Linus'
         }]
     };
-	$c->render(json => $json);
+    $c->render(json => $json);
 };
 
 app->start;
