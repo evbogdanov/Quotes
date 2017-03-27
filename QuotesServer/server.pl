@@ -4,13 +4,14 @@ use experimental 'signatures';
 get '/quotes' => sub ($c) {
     my $json = {
         quotes => [{
-            id     => 1,
             text   => 'Hello, World!',
             source => 'K&R'
         }, {
-            id     => 2,
             text   => 'Talk is cheap. Show me the code.',
-            source => 'Linus'
+            source => 'Linus Torvalds'
+        }, {
+            text   => 'Premature optimization is the root of all evil (or at least most of it) in programming.',
+            source => 'Donald Knuth'
         }]
     };
     $c->render(json => $json);
