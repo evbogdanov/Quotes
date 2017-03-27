@@ -15,6 +15,7 @@
 		A61EF3DE1E854218006EB63F /* Quote.m in Sources */ = {isa = PBXBuildFile; fileRef = A61EF3DD1E854218006EB63F /* Quote.m */; };
 		A680DC501E8940DA00CECB75 /* API.m in Sources */ = {isa = PBXBuildFile; fileRef = A680DC4F1E8940DA00CECB75 /* API.m */; };
 		A680DC531E895C4A00CECB75 /* QuotesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A680DC521E895C4A00CECB75 /* QuotesVC.m */; };
+		A680DC7C1E89873000CECB75 /* QuoteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A680DC7B1E89873000CECB75 /* QuoteVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		A680DC4F1E8940DA00CECB75 /* API.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = API.m; sourceTree = "<group>"; };
 		A680DC511E895C4A00CECB75 /* QuotesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuotesVC.h; sourceTree = "<group>"; };
 		A680DC521E895C4A00CECB75 /* QuotesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuotesVC.m; sourceTree = "<group>"; };
+		A680DC7A1E89873000CECB75 /* QuoteVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuoteVC.h; sourceTree = "<group>"; };
+		A680DC7B1E89873000CECB75 /* QuoteVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuoteVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,8 @@
 			children = (
 				A680DC511E895C4A00CECB75 /* QuotesVC.h */,
 				A680DC521E895C4A00CECB75 /* QuotesVC.m */,
+				A680DC7A1E89873000CECB75 /* QuoteVC.h */,
+				A680DC7B1E89873000CECB75 /* QuoteVC.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -187,6 +192,7 @@
 				A61EF3DE1E854218006EB63F /* Quote.m in Sources */,
 				A680DC531E895C4A00CECB75 /* QuotesVC.m in Sources */,
 				A61B077E1E85188D00368DF2 /* AppDelegate.m in Sources */,
+				A680DC7C1E89873000CECB75 /* QuoteVC.m in Sources */,
 				A61B077B1E85188D00368DF2 /* main.m in Sources */,
 				A680DC501E8940DA00CECB75 /* API.m in Sources */,
 			);
