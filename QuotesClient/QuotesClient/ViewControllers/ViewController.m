@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "API.h"
+#import "Quote.h"
 
 @interface ViewController ()
 
@@ -16,10 +18,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    NSLog(@"Still works!");
+    [[API sharedAPI] getQuotesWithCallback:^(NSArray *quotes, NSError *error) {
+        if (error) {
+            NSLog(@"Oh no! %@", error);
+            return;
+        }
+        for (NSDictionary *dict in quotes) {
+            Quote *quote = [[Quote alloc] initWithDictionary:dict];
+            if (quote) {
+                NSLog(@"%@", quote);
+            }
+        }
+    }];
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

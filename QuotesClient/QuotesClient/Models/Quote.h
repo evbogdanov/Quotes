@@ -10,4 +10,9 @@
 
 @interface Quote : NSObject
 
+@property (strong, nonatomic) NSString *text;
+@property (strong, nonatomic) NSString *source;
+
+- (instancetype)initWithDictionary:(NSDictionary *)dict;
+
 @end
