@@ -149,6 +149,7 @@
 				TargetAttributes = {
 					A61B07751E85188D00368DF2 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = VBN3ZL92BZ;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -314,10 +315,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VBN3ZL92BZ;
 				INFOPLIST_FILE = QuotesClient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.bogdanov.QuotesClient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -325,10 +328,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VBN3ZL92BZ;
 				INFOPLIST_FILE = QuotesClient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.bogdanov.QuotesClient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

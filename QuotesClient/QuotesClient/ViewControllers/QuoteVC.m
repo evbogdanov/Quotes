@@ -25,11 +25,18 @@
 }
 
 - (IBAction)deleteQuote:(UIBarButtonItem *)sender {
-    // Delete quote from database...
-    NSLog(@"Delete quote: %@", self.quote);
-    
-    // Quote deleted. So it doesn't make sense to be on screen anymore.
-    [self.navigationController popViewControllerAnimated:YES];
+    [[API sharedAPI] deleteQuoteWithIdentifier:self.quote.identifier callback:^(NSError *error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (error) {
+                // TODO: show alert or something
+                NSLog(@"Cannot delete! %@", error);
+                return;
+            }
+            
+            // Quote deleted. So it doesn't make sense to be on screen anymore.
+            [self.navigationController popViewControllerAnimated:YES];
+        });
+    }];
 }
 
 @end

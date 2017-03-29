@@ -51,11 +51,38 @@
                             <outlet property="delegate" destination="Ney-7y-onW" id="TRN-U8-s9N"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Quotes" id="0pW-9b-bFc"/>
+                    <navigationItem key="navigationItem" title="Quotes" id="0pW-9b-bFc">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="MQJ-F5-elP">
+                            <connections>
+                                <segue destination="VMm-CA-BY9" kind="show" id="IBi-CS-V2N"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zxo-qV-v5D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="660" y="155.17241379310346"/>
+        </scene>
+        <!--New Quote-->
+        <scene sceneID="VAr-7g-klO">
+            <objects>
+                <viewController id="VMm-CA-BY9" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="M7C-6Q-1Gq"/>
+                        <viewControllerLayoutGuide type="bottom" id="3Tz-IF-PGw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KBt-ul-xPX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Quote" id="Q5P-9I-p7Z">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Pkt-St-3KV"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z36-RY-YL3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1514.4000000000001" y="-511.39430284857576"/>
         </scene>
         <!--Quote-->
         <scene sceneID="69R-Qb-Bd6">
@@ -87,7 +114,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Quote" id="7mj-dA-H5d">
-                        <barButtonItem key="rightBarButtonItem" title="Delete" id="XeM-dd-oYe">
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="XeM-dd-oYe">
                             <connections>
                                 <action selector="deleteQuote:" destination="sGN-Cy-RwX" id="HI4-XN-cCe"/>
                             </connections>

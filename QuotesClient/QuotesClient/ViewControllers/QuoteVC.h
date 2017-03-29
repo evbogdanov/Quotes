@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "API.h"
 #import "Quote.h"
 
 @interface QuoteVC : UIViewController

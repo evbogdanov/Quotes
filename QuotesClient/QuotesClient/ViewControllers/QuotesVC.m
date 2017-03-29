@@ -16,30 +16,37 @@
 
 @implementation QuotesVC
 
+
+#pragma mark - VC lifecycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+    // TODO: don't make network request here? Come up with something more efficient.
+    // Also I have to think about latency. It may be a good idea to first show the user
+    // an activity indicator of some sort
     [[API sharedAPI] getQuotesWithCallback:^(NSArray *quotes, NSError *error) {
         if (error) {
             NSLog(@"Oh no! %@", error);
             return;
         }
-
+        
+        [self.quotes removeAllObjects];
         for (NSDictionary *dict in quotes) {
             Quote *quote = [[Quote alloc] initWithDictionary:dict];
             if (quote) {
                 [self.quotes addObject:quote];
             }
         }
-
+        
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.tableView reloadData];
         });
     }];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
 }
 
 

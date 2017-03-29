@@ -32,11 +32,38 @@
         
         NSError *JSONError;
         NSDictionary *JSON = [NSJSONSerialization JSONObjectWithData:data options:0 error:&JSONError];
-        
+
         if (JSONError)
             return callback(nil, JSONError);
         
         callback(JSON[@"quotes"], nil);
+    }] resume];
+}
+
+// TODO: don't repeat yourself, write wrapper for all network requests.
+- (void)deleteQuoteWithIdentifier:(NSNumber *)identifier callback:(void(^)(NSError *))callback {
+    NSString *endpoint = [NSString stringWithFormat:@"/quotes/%@", identifier];
+    NSURL *URL = [API URLFor:endpoint];
+    NSURLSession *session = [NSURLSession sharedSession];
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL];
+    request.HTTPMethod = @"DELETE";
+    
+    [[session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        if (error)
+            return callback(error);
+        
+        NSError *JSONError;
+        NSDictionary *JSON = [NSJSONSerialization JSONObjectWithData:data options:0 error:&JSONError];
+        
+        if (JSONError)
+            return callback(JSONError);
+        
+        NSNumber *deleted = JSON[@"deleted"];
+        if (!deleted || deleted.unsignedIntegerValue != 1)
+            return callback([NSError errorWithDomain:@"io.bogdanov.QuotesClient" code:13 userInfo:nil]);
+        
+        callback(nil);
     }] resume];
 }
 
