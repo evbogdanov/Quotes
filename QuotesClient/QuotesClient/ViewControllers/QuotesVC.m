@@ -75,4 +75,16 @@
     return NO;
 }
 
+
+#pragma mark - Segues
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"ShowQuote"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        Quote *quote = self.quotes[indexPath.row];
+        QuoteVC *vc = (QuoteVC *)segue.destinationViewController;
+        vc.quote = quote;
+    }
+}
+
 @end

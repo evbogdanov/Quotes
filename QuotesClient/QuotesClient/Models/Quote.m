@@ -11,7 +11,8 @@
 @implementation Quote
 
 - (instancetype)initWithDictionary:(NSDictionary *)dict {
-    if ((self = [super init]) && dict[@"text"] && dict[@"source"]) {
+    if ((self = [super init]) && dict[@"identifier"] && dict[@"text"] && dict[@"source"]) {
+        _identifier = dict[@"identifier"];
         _text = dict[@"text"];
         _source = dict[@"source"];
         return self;
@@ -20,7 +21,7 @@
 }
 
 - (NSString *)description {
-    return [NSString stringWithFormat:@"<<%@>> -- %@", self.text, self.source];
+    return [NSString stringWithFormat:@"Quote #%@ <<%@>> -- %@", self.identifier, self.text, self.source];
 }
 
 @end

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Quote.h"
 
 @interface QuoteVC : UIViewController
+
+@property (strong, nonatomic) Quote *quote;
 
 @end

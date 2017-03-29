@@ -19,8 +19,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.textLabel.text = @"quote.text";
-    self.sourceLabel.text = @"quote.source";
+    
+    self.textLabel.text = self.quote.text;
+    self.sourceLabel.text = self.quote.source;
+}
+
+- (IBAction)deleteQuote:(UIBarButtonItem *)sender {
+    // Delete quote from database...
+    NSLog(@"Delete quote: %@", self.quote);
+    
+    // Quote deleted. So it doesn't make sense to be on screen anymore.
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end
