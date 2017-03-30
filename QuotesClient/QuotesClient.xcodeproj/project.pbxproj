@@ -13,6 +13,7 @@
 		A61B07861E85188E00368DF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A61B07851E85188E00368DF2 /* Assets.xcassets */; };
 		A61B07891E85188E00368DF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A61B07871E85188E00368DF2 /* LaunchScreen.storyboard */; };
 		A61EF3DE1E854218006EB63F /* Quote.m in Sources */ = {isa = PBXBuildFile; fileRef = A61EF3DD1E854218006EB63F /* Quote.m */; };
+		A628F96C1E8D7CF00065F749 /* NewQuoteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A628F96B1E8D7CF00065F749 /* NewQuoteVC.m */; };
 		A680DC501E8940DA00CECB75 /* API.m in Sources */ = {isa = PBXBuildFile; fileRef = A680DC4F1E8940DA00CECB75 /* API.m */; };
 		A680DC531E895C4A00CECB75 /* QuotesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A680DC521E895C4A00CECB75 /* QuotesVC.m */; };
 		A680DC7C1E89873000CECB75 /* QuoteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A680DC7B1E89873000CECB75 /* QuoteVC.m */; };
@@ -29,6 +30,8 @@
 		A61B078A1E85188E00368DF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A61EF3DC1E854218006EB63F /* Quote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Quote.h; sourceTree = "<group>"; };
 		A61EF3DD1E854218006EB63F /* Quote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Quote.m; sourceTree = "<group>"; };
+		A628F96A1E8D7CF00065F749 /* NewQuoteVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewQuoteVC.h; sourceTree = "<group>"; };
+		A628F96B1E8D7CF00065F749 /* NewQuoteVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewQuoteVC.m; sourceTree = "<group>"; };
 		A680DC4E1E8940DA00CECB75 /* API.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = API.h; sourceTree = "<group>"; };
 		A680DC4F1E8940DA00CECB75 /* API.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = API.m; sourceTree = "<group>"; };
 		A680DC511E895C4A00CECB75 /* QuotesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuotesVC.h; sourceTree = "<group>"; };
@@ -94,6 +97,8 @@
 				A680DC521E895C4A00CECB75 /* QuotesVC.m */,
 				A680DC7A1E89873000CECB75 /* QuoteVC.h */,
 				A680DC7B1E89873000CECB75 /* QuoteVC.m */,
+				A628F96A1E8D7CF00065F749 /* NewQuoteVC.h */,
+				A628F96B1E8D7CF00065F749 /* NewQuoteVC.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -191,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A61EF3DE1E854218006EB63F /* Quote.m in Sources */,
+				A628F96C1E8D7CF00065F749 /* NewQuoteVC.m in Sources */,
 				A680DC531E895C4A00CECB75 /* QuotesVC.m in Sources */,
 				A61B077E1E85188D00368DF2 /* AppDelegate.m in Sources */,
 				A680DC7C1E89873000CECB75 /* QuoteVC.m in Sources */,

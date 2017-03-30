@@ -13,6 +13,6 @@
 + (API *)sharedAPI;
 - (void)getQuotesWithCallback:(void(^)(NSArray *quotes, NSError *error))callback;
 - (void)deleteQuoteWithIdentifier:(NSNumber *)identifier callback:(void(^)(NSError *error))callback;
-// TODO: create quote
+- (void)createQuoteWithText:(NSString *)text source:(NSString *)source callback:(void(^)(NSError *error))callback;
 
 @end

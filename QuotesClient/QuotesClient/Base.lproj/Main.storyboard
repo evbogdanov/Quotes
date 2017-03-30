@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6j0-E9-Rj9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6j0-E9-Rj9">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -66,7 +66,7 @@
         <!--New Quote-->
         <scene sceneID="VAr-7g-klO">
             <objects>
-                <viewController id="VMm-CA-BY9" sceneMemberID="viewController">
+                <viewController id="VMm-CA-BY9" customClass="NewQuoteVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="M7C-6Q-1Gq"/>
                         <viewControllerLayoutGuide type="bottom" id="3Tz-IF-PGw"/>
@@ -74,11 +74,35 @@
                     <view key="view" contentMode="scaleToFill" id="KBt-ul-xPX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Text" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I7j-6t-bHH">
+                                <rect key="frame" x="16" y="289" width="337" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Source" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wIV-YW-685">
+                                <rect key="frame" x="16" y="340" width="337" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Quote" id="Q5P-9I-p7Z">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Pkt-St-3KV"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Pkt-St-3KV">
+                            <connections>
+                                <action selector="createQuote:" destination="VMm-CA-BY9" id="jSo-RJ-aBQ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="sourceField" destination="wIV-YW-685" id="Lfh-g2-0e0"/>
+                        <outlet property="textField" destination="I7j-6t-bHH" id="uMD-7R-vwE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z36-RY-YL3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
